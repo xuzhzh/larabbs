@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-
+use App\Http\Requests\UserRequest;
 class UsersController extends Controller
 {
 
     //index show create store edit update destory
     public function show(User $user)
     {
-       return view('users.show',compact('user',compact('user')));
+        return view('users.show', compact('user', $user));
+    }
+
+    public function edit(User $user)
+    {
+        return view('users.edit', compact('user', $user));
+    }
+
+    public function update(UserRequest $request, User $user)
+    {
+        $user->update($request->all());
+        return redirect()->route('users.show', $user->id)->with('success', '个人资料更新成功！');
     }
 }
