@@ -59,11 +59,48 @@ body{
 
         p{
             margin: 19px 0;
-            columns: #c1c1c1;
+            color: #c1c1c1;
             a{
                 color:inherit;
             }
         }
     }
-    
+}
+/* Topic Index Page */
+.topics-index-page {
+    .topic-list {
+        .nav > li > a {
+            position: relative;
+            display: block;
+            padding: 5px 14px;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #444444;
+        }
+
+        .meta {
+            font-size: 0.9em;
+            color: #b3b3b3;
+
+            a {
+                color: #b3b3b3;
+            }
+        }
+
+        .badge {
+            background-color: #d8d8d8;
+        }
+
+        hr {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border: 0;
+            border-top: 1px solid #dcebf5;
+        }
+    }
+}
+#app > div.container {
+    margin-bottom: 100px;
 }
